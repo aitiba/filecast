@@ -1,5 +1,6 @@
 var socket = io.connect();
-var room = "abc123";
+// var room = "abc123";
+var room = window.location.href.split("/")[3];
 
 $("#buttom").on("click",function() {
    var message = "<a href='#'>IEUP!</a>";
