@@ -5,14 +5,15 @@
     .module('app')
     .controller('youtubeCtrl', youtubeCtrl);
 
-  youtubeCtrl.$inject = ['$scope', '$stateParams'];
+  // youtubeCtrl.$inject = ['$scope', '$stateParams'];
 
   /* @ngInject */
   function youtubeCtrl($scope, $stateParams) {
+    var vm = this;
     var socket = io.connect();
     var room = $stateParams.room;
 
-    $scope.castFile = function() {
+    vm.castFile = function() {
       var message = "<a href='#'>IEUP!</a>" + room;
       socket.emit('sendMessage', room, message);
     }
@@ -25,7 +26,7 @@
     // pintar el mensaje del servidor
     socket.on('message', function(data) {
       console.log(data);
-      $scope.screen = data;
+      vm.screen = data;
       $scope.$digest();
     });
 
