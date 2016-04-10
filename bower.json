@@ -1,0 +1,23 @@
+{
+  "name": "filecast",
+  "description": "",
+  "main": "",
+  "authors": [
+    "Aitor Ibañez <freelance@aitoribanez.com>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/aitiba/filecast",
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "angularjs#^1.5.3",
+    "angular-ui-router": "^0.2.18",
+    "angular-sanitize": "^1.5.3"
+  }
+}
