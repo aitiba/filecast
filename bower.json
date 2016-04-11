@@ -21,6 +21,5 @@
     "angular-sanitize": "^1.5.3"
   },
   "devDependencies": {
-    "livereload-js": "^2.2.1"
   }
 }

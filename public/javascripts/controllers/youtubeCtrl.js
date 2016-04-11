@@ -8,7 +8,7 @@
   // youtubeCtrl.$inject = ['$scope', '$stateParams'];
 
   /* @ngInject */
-  function youtubeCtrl($scope, $stateParams) {
+  function youtubeCtrl($scope, $stateParams, youtubeService) {
     var vm = this;
     var socket = io.connect();
     var room = $stateParams.room;
@@ -30,5 +30,8 @@
       $scope.$digest();
     });
 
+    youtubeService.get().then(function(videos) {
+      console.log(videos.data.items);
+    });
   }
 })();

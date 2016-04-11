@@ -11,9 +11,10 @@ named channel.
 git clone xxx
 cd fileRender
 npm install
+npm run-script build
 npm start
 
 == Build scripts==
 
-wiredep and inject js and css files:
+create config, wiredep and inject js and css files:
     npm run-script build
