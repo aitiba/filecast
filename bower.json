@@ -19,5 +19,8 @@
     "angular": "angularjs#^1.5.3",
     "angular-ui-router": "^0.2.18",
     "angular-sanitize": "^1.5.3"
+  },
+  "devDependencies": {
+    "livereload-js": "^2.2.1"
   }
 }

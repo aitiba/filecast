@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node app.js",
+    "start": "gulp serve",
     "build": "gulp wiredep-step && gulp inject-step"
   },
   "dependencies": {
@@ -19,6 +19,7 @@
   "devDependencies": {
     "gulp": "^3.9.1",
     "gulp-inject": "^4.0.0",
+    "gulp-live-server": "0.0.29",
     "wiredep": "^4.0.0"
   }
 }
