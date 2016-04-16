@@ -11,7 +11,7 @@
           url: '/home/:room',
           templateUrl: 'templates/home.html',
           controller: 'youtubeCtrl',
-          controllerAs: 'vm'
+          controllerAs: 'youtube'
         })
 
     });

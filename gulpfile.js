@@ -2,7 +2,7 @@ var gulp = require('gulp'),
     wiredep = require('wiredep').stream,
     inject = require('gulp-inject'),
     gls = require('gulp-live-server'),
-    gulpNgConfig = require('gulp-ng-config'),
+    gulpNgConfig = require('gulp-ng-config');
 
     gulp.task('serve', function() {
       var server = gls('app.js', {env: {NODE_ENV: 'development'}});
@@ -34,6 +34,7 @@ var gulp = require('gulp'),
         .pipe(gulp.dest('./public'));
     });
 
+    //create needed constant for private configurations.
     gulp.task('config', function () {
       return gulp.src('./prod-config.json')
         .pipe(gulpNgConfig('app.config'))

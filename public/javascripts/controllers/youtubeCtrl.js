@@ -18,6 +18,11 @@
       socket.emit('sendMessage', room, message);
     }
 
+    vm.view = function(videoId) {
+      vm.videoId = videoId
+    }
+
+
     //al conectarse se conecta a la sala
     socket.on('connect', function() {
       socket.emit('room', room);
@@ -31,7 +36,9 @@
     });
 
     youtubeService.get().then(function(videos) {
+    //   https://www.youtube.com/v/1hnvapbxzs4?version=3&enablejsapi=1
       console.log(videos.data.items);
+      vm.videos = videos.data.items;
     });
   }
 })();
