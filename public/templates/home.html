@@ -1,14 +1,23 @@
 <div>
-  <h1>
+  <<h1>
     <a id="buttom" ng-click="youtube.castFile()">Buttom</a>
   </h1>
-  <p ng-bind-html="youtube.screen"></p>
+  <p ng-bind-html="screen"></p>
+
+  <!-- <iframe src=https://www.youtube.com/v/1hnvapbxzs4?version=3&enablejsapi=1 frameborder="0"></iframe> -->
+
+  <!-- <ng-youtube-embed
+      url="youtube.src"
+      autoplay="true"
+      color="white"
+      disablekb="true"
+      end="20">
+  </ng-youtube-embed> --->
 
   <div ng-repeat="video in youtube.videos">
     <p>{{video.snippet.title}}</p>
-    <p><a ng-click="youtube.view({{video.snippet.resourceId.videoId}})"><img src="{{video.snippet.thumbnails.default.url}}" /></a></p>
+    <p><a ng-click="youtube.castFile(video.snippet.resourceId.videoId)"><img src="{{video.snippet.thumbnails.default.url}}" /></a></p>
 
-    <!-- <iframe src="https://www.youtube.com/v/1hnvapbxzs4?version=3&enablejsapi=1" frameborder="0"></iframe> -->
   </div>
 
 </div>

@@ -2,6 +2,6 @@
   'use strict';
 
   angular
-    .module('app', ['ui.router', 'ngSanitize', 'app.config']);
+    .module('app', ['ui.router', 'ngSanitize', 'app.config', 'ngYoutubeEmbed']);
 
 })();
